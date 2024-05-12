@@ -1,16 +1,16 @@
-# wysłane paczki z produktami od użytkownika
+# # wysłane paczki z produktami od użytkownika
 # # waga produktów wczytywana na początku
 # # ilość produktów wczytywana na początku
-# do każdej paczki mieści się max 20 kg
-# powiedz w ilu paczkach wysłane zostaną produkty
-# powiedz ile kg wysłano
-# powiedz ile wysłano pustych kg
-# powiedz, ktora paczka miała najwięcej pustych kg
-#print(f"Produkt {idx + 1}: {waga_produktu} kg")
+# # do każdej paczki mieści się max 20 kg
+# # powiedz w ilu paczkach wysłane zostaną produkty
+# # powiedz ile kg wysłano
+# # powiedz ile wysłano pustych kg
+# powiedz, ktora paczka miała najwięcej pustych kg i ile
+
 
 
 MAKSYMALNA_LICZBA_KG_W_PACZCE = 20
-ilosc_produktow =0
+ilosc_produktow = 0
 waga_produktu = 0
 suma_wag = 0
 liczba_paczek_wyslanych = 0
@@ -51,7 +51,7 @@ print("\nPODSUMOWANIE: ")
 print(f"\nLiczba wyslanych paczek: {liczba_paczek_wyslanych}")
 print(f"Liczba wyslanych kilogramow: {suma_wag}")
 print(f"Suma putych kilogramow: {suma_pustych_kg_w_paczkach}")
-print(f"Paczka numer {nr_paczki_z_max_pustych_kg} ma najwiecej pustych kilogramow w ilosci: {max_puste_kg}")
+print(f"Paczka numer {nr_paczki_z_max_pustych_kg} ma najwiecej pustych kilogramow w ilosci: {max_puste_kg}\n")
 print("+"*70)
 
 
