@@ -19,8 +19,11 @@ liczba_paczek_wyslanych = 0
 aktualna_waga_paczki = 0
 waga_wyslanej_paczki = 0
 Nowa_Paczka = 0
-najwieksza_liczba_pustych_kg_w_paczce = 0
+najciezsza_paczka = 0
+suma_pustych_kg_w_paczce = 0
+najwiecej_pustych_kg = 0
 numer_paczki_z_najwieksza_iloscia_pustych_kg = None
+puste_kg = 0
 
 ilosc_produktow = int(input("Podaj liczbe produktow do wyslania: "))
 print("Podaj wage kazdego z produktow w kilogramach. Waga musi byc wieksza od 0 kg i nie moze byc wieksza niz 10 kg.")
@@ -40,5 +43,19 @@ for idx in range (ilosc_produktow):
         aktualna_waga_paczki += waga_produktu
 if aktualna_waga_paczki > 0:
     liczba_paczek_wyslanych += 1
+if aktualna_waga_paczki > suma_pustych_kg_w_paczce:
+    suma_pustych_kg_w_paczce = liczba_paczek_wyslanych * MAKSYMALNA_LICZBA_KG_W_PACZCE - suma_wag
+if puste_kg > najwiecej_pustych_kg:
+    najwiecej_pustych_kg = puste_kg
+    numer_paczki_z_najwieksza_iloscia_pustych_kg = liczba_paczek_wyslanych + 1
+
+
+print("+"*70)
+print("\nPODSUMOWANIE: ")
 print(f"\nLiczba wyslanych paczek: {liczba_paczek_wyslanych}")
+print(f"Liczba wyslanych kilogramow: {suma_wag}")
+print(f"Suma putych kilogramow: {suma_pustych_kg_w_paczce}")
+print(f"Paczka numer {numer_paczki_z_najwieksza_iloscia_pustych_kg} ma najwiecej pustych kilogramow w ilosci: {puste_kg}")
+print("+"*70)
+
 
