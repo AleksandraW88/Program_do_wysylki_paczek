@@ -50,7 +50,7 @@ print("+"*70)
 print("\nPODSUMOWANIE: ")
 print(f"\nLiczba wyslanych paczek: {liczba_paczek_wyslanych}")
 print(f"Liczba wyslanych kilogramow: {suma_wag}")
-print(f"Suma putych kilogramow: {suma_pustych_kg_w_paczkach}")
+print(f"Suma pustych kilogramow: {suma_pustych_kg_w_paczkach}")
 print(f"Paczka numer {nr_paczki_z_max_pustych_kg} ma najwiecej pustych kilogramow w ilosci: {max_puste_kg}\n")
 print("+"*70)
 
