@@ -5,7 +5,6 @@ suma_wag = 0
 liczba_paczek_wyslanych = 0
 aktualna_waga_paczki = 0
 suma_pustych_kg_w_paczkach = 0
-najwiecej_pustych_kg = 0
 nr_paczki_z_max_pustych_kg = 1
 max_puste_kg = 0
 
