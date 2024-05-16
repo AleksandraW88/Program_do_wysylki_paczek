@@ -17,7 +17,7 @@ liczba_paczek_wyslanych = 0
 aktualna_waga_paczki = 0
 suma_pustych_kg_w_paczkach = 0
 najwiecej_pustych_kg = 0
-nr_paczki_z_max_pustych_kg = None
+nr_paczki_z_max_pustych_kg = 1
 max_puste_kg = 0
 
 ilosc_produktow = int(input("Podaj liczbe produktow do wyslania: "))
@@ -35,16 +35,23 @@ for idx in range (ilosc_produktow):
 
     if aktualna_waga_paczki + waga_produktu > MAKSYMALNA_LICZBA_KG_W_PACZCE:
         liczba_paczek_wyslanych += 1
+        puste_kg = MAKSYMALNA_LICZBA_KG_W_PACZCE - aktualna_waga_paczki
+        if puste_kg > max_puste_kg:
+            max_puste_kg = puste_kg
+            nr_paczki_z_max_pustych_kg = liczba_paczek_wyslanych
         aktualna_waga_paczki = waga_produktu
     else:
         aktualna_waga_paczki += waga_produktu
 if aktualna_waga_paczki > 0:
     liczba_paczek_wyslanych += 1
+    puste_kg = MAKSYMALNA_LICZBA_KG_W_PACZCE-aktualna_waga_paczki
+    if puste_kg > max_puste_kg:
+        max_puste_kg = puste_kg
+        nr_paczki_z_max_pustych_kg = liczba_paczek_wyslanych
 if aktualna_waga_paczki > suma_pustych_kg_w_paczkach:
     suma_pustych_kg_w_paczkach = liczba_paczek_wyslanych * MAKSYMALNA_LICZBA_KG_W_PACZCE - suma_wag
 
-#nie wiem gdzie i jak opisac paczke z najwieksza liczba pustych kg...
-#max_puste_kg = MAKSYMALNA_LICZBA_KG_W_PACZCE - najwiecej_pustych_kg
+
 
 print("+"*70)
 print("\nPODSUMOWANIE: ")
