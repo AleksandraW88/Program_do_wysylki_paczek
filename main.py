@@ -1,14 +1,3 @@
-# # wysłane paczki z produktami od użytkownika
-# # waga produktów wczytywana na początku
-# # ilość produktów wczytywana na początku
-# # do każdej paczki mieści się max 20 kg
-# # powiedz w ilu paczkach wysłane zostaną produkty
-# # powiedz ile kg wysłano
-# # powiedz ile wysłano pustych kg
-# powiedz, ktora paczka miała najwięcej pustych kg i ile
-
-
-
 MAKSYMALNA_LICZBA_KG_W_PACZCE = 20
 ilosc_produktow = 0
 waga_produktu = 0
@@ -28,11 +17,6 @@ for idx in range (ilosc_produktow):
         print("Waga produktu musi byc wieksza od 0 kg, ale nie wieksza niz 10 kg. Program przerwany. Podano bledne dane.")
         break
     suma_wag += waga_produktu
-
-    #print(f"Suma wag wszystkich produktow do wyslania: {suma_wag} kg")
-    #nie wiem jak i gdzie dać sume wag produktów by nie powtarzala sie za kazdym razem po podaniu wagi kolejnego produktu
-    # i tak by nie zaburzyc ponizszej petli if...
-
     if aktualna_waga_paczki + waga_produktu > MAKSYMALNA_LICZBA_KG_W_PACZCE:
         liczba_paczek_wyslanych += 1
         puste_kg = MAKSYMALNA_LICZBA_KG_W_PACZCE - aktualna_waga_paczki
@@ -50,8 +34,6 @@ if aktualna_waga_paczki > 0:
         nr_paczki_z_max_pustych_kg = liczba_paczek_wyslanych
 if aktualna_waga_paczki > suma_pustych_kg_w_paczkach:
     suma_pustych_kg_w_paczkach = liczba_paczek_wyslanych * MAKSYMALNA_LICZBA_KG_W_PACZCE - suma_wag
-
-
 
 print("+"*70)
 print("\nPODSUMOWANIE: ")
